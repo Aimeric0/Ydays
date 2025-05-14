@@ -436,8 +436,13 @@ footer {
     flex-wrap: wrap;
 }
 
-.filtre-btn {
-    padding: 0.5rem 1.5rem;
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    padding: 0.8rem 1.5rem;
     border: none;
     border-radius: 25px;
     background-color: var(--white);
@@ -446,16 +451,69 @@ footer {
     transition: all 0.3s ease;
     font-weight: 500;
     box-shadow: var(--card-shadow);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
 }
 
-.filtre-btn:hover {
+.dropdown-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.filtre-btn.active {
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--white);
+    min-width: 200px;
+    box-shadow: var(--card-shadow);
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    z-index: 1000;
+}
+
+.dropdown-content.show {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.dropdown-content .filtre-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    background: none;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.dropdown-content .filtre-btn:hover {
+    background-color: rgba(108, 92, 231, 0.1);
+    transform: none;
+}
+
+.dropdown-content .filtre-btn.active {
     background-color: var(--primary-color);
     color: var(--white);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -10px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
 }
 
 .evenements-grid {

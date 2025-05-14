@@ -1,6 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const dropdownBtn = document.querySelector('.dropdown-btn');
+    const dropdownContent = document.querySelector('.dropdown-content');
     const filtres = document.querySelectorAll('.filtre-btn');
     const evenements = document.querySelectorAll('.evenement-card');
+    
+    // Gestion du menu déroulant
+    dropdownBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        dropdownContent.classList.toggle('show');
+    });
+
+    // Fermer le menu si on clique en dehors
+    document.addEventListener('click', function(e) {
+        if (!dropdownContent.contains(e.target) && !dropdownBtn.contains(e.target)) {
+            dropdownContent.classList.remove('show');
+        }
+    });
     
     function filtrerEvenements(mois) {
         evenements.forEach(evenement => {
@@ -17,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
             filtres.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
             filtrerEvenements(this.dataset.mois);
+            dropdownContent.classList.remove('show');
         });
     });
 
