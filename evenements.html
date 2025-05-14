@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événements - Play for All</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+            <li><a href="evenements.html" class="active"><i class="fas fa-calendar-alt"></i> Événements</a></li>
+        </ul>
+    </nav>
+
+  
+    <section class="evenements-section">
+        <h2>Calendrier des Événements</h2>
+        <div class="evenements-container">
+         
+            <div class="filtres">
+                <button class="filtre-btn active" data-mois="tous">Tous</button>
+                <button class="filtre-btn" data-mois="janvier">Janvier</button>
+                <button class="filtre-btn" data-mois="fevrier">Février</button>
+                <button class="filtre-btn" data-mois="mars">Mars</button>
+                <button class="filtre-btn" data-mois="avril">Avril</button>
+                <button class="filtre-btn" data-mois="mai">Mai</button>
+                <button class="filtre-btn" data-mois="juin">Juin</button>
+            </div>
+
+            <div class="evenements-grid">
+   
+                <div class="evenement-card" data-mois="mars">
+                    <div class="evenement-date">
+                        <span class="jour">15</span>
+                        <span class="mois">Mars</span>
+                    </div>
+                    <div class="evenement-content">
+                        <h3>Tournoi FIFA 24</h3>
+                        <p class="evenement-lieu"><i class="fas fa-map-marker-alt"></i> Salle de jeux</p>
+                        <p class="evenement-heure"><i class="fas fa-clock"></i> 14:00 - 18:00</p>
+                        <p class="evenement-description">Tournoi de FIFA 24 avec des lots à gagner !</p>
+                    </div>
+                </div>
+
+
+                <div class="evenement-card" data-mois="avril">
+                    <div class="evenement-date">
+                        <span class="jour">05</span>
+                        <span class="mois">Avril</span>
+                    </div>
+                    <div class="evenement-content">
+                        <h3>Soirée Jeux de Rôle</h3>
+                        <p class="evenement-lieu"><i class="fas fa-map-marker-alt"></i> Salle principale</p>
+                        <p class="evenement-heure"><i class="fas fa-clock"></i> 19:00 - 23:00</p>
+                        <p class="evenement-description">Découvrez les jeux de rôle avec des maîtres de jeu expérimentés.</p>
+                    </div>
+                </div>
+
+
+                <div class="evenement-card" data-mois="mai">
+                    <div class="evenement-date">
+                        <span class="jour">20</span>
+                        <span class="mois">Mai</span>
+                    </div>
+                    <div class="evenement-content">
+                        <h3>LAN Party</h3>
+                        <p class="evenement-lieu"><i class="fas fa-map-marker-alt"></i> Grande salle</p>
+                        <p class="evenement-heure"><i class="fas fa-clock"></i> 10:00 - 22:00</p>
+                        <p class="evenement-description">Une journée entière de jeux en réseau local !</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Play for All</h3>
+                <p>Votre événement gaming de l'année</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><a href="mailto:contact@example.com"><i class="fas fa-envelope"></i> contact@example.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/_playforall_/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright 2025 Play for All - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="evenements.js"></script>
+</body>
+</html> 
