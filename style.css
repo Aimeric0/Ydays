@@ -56,6 +56,10 @@ body:not(:has(.evenements-section)) .logo img {
 }
 
 /* Logo sur la page événements */
+body:has(.evenements-section) .logo {
+    top: -0.001rem;
+}
+
 body:has(.evenements-section) .logo img {
     height: 150%;
     width: auto;
@@ -722,8 +726,18 @@ footer {
         padding: 1rem 0;
     }
 
-    .logo img {
-        height: 300%;
+    .logo {
+        left: 0.5rem;
+    }
+
+    /* Logo sur la page d'accueil en mode tablette */
+    body:not(:has(.evenements-section)) .logo img {
+        height: 200%;
+    }
+
+    /* Logo sur la page événements en mode tablette */
+    body:has(.evenements-section) .logo img {
+        height: 100%;
     }
 
     .navbar ul {
@@ -825,8 +839,18 @@ footer {
         padding: 0.8rem 0;
     }
 
-    .logo img {
-        height: 250%;
+    .logo {
+        left: 0.3rem;
+    }
+
+    /* Logo sur la page d'accueil en mode mobile */
+    body:not(:has(.evenements-section)) .logo img {
+        height: 150%;
+    }
+
+    /* Logo sur la page événements en mode mobile */
+    body:has(.evenements-section) .logo img {
+        height: 80%;
     }
 
     .navbar ul {
