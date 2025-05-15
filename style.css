@@ -57,7 +57,7 @@ body:not(:has(.evenements-section)) .logo img {
 
 /* Logo sur la page événements */
 body:has(.evenements-section) .logo {
-    top: -0.001rem;
+    top: 1rem;
 }
 
 body:has(.evenements-section) .logo img {
@@ -849,6 +849,10 @@ footer {
     }
 
     /* Logo sur la page événements en mode mobile */
+    body:has(.evenements-section) .logo {
+        top: 0.01rem;
+    }
+
     body:has(.evenements-section) .logo img {
         height: 80%;
     }
