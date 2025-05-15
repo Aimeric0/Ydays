@@ -701,3 +701,223 @@ footer {
         opacity: 1;
     }
 }
+
+/* Media Queries pour la responsivité */
+@media (max-width: 1200px) {
+    .navbar-container {
+        padding: 0 1rem;
+    }
+
+    .evenements-section {
+        padding: 6rem 1rem 3rem;
+    }
+
+    .footer-content {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navigation */
+    .navbar {
+        padding: 1rem 0;
+    }
+
+    .logo img {
+        height: 300%;
+    }
+
+    .navbar ul {
+        gap: 1.5rem;
+    }
+
+    .navbar a {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    /* Header */
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    header p {
+        font-size: 1.2rem;
+    }
+
+    /* Section Projets */
+    #projets {
+        padding: 3rem 1rem;
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Boutons CTA */
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .cta-button {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    /* Événements */
+    .dropdown-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .dropdown-content {
+        width: 100%;
+        left: 0;
+        transform: none;
+    }
+
+    .evenement-card {
+        flex-direction: column;
+    }
+
+    .evenement-date {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0.8rem;
+    }
+
+    .evenement-date .jour {
+        font-size: 1.5rem;
+    }
+
+    .evenement-date .mois {
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .footer-section {
+        padding: 1.2rem;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.5rem;
+    }
+    
+    .social-links a {
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Navigation */
+    .navbar {
+        padding: 0.8rem 0;
+    }
+
+    .logo img {
+        height: 250%;
+    }
+
+    .navbar ul {
+        gap: 1rem;
+    }
+
+    .navbar a {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .navbar a i {
+        font-size: 1rem;
+    }
+
+    /* Header */
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    header p {
+        font-size: 1rem;
+    }
+
+    /* Section Projets */
+    #projets h2 {
+        font-size: 2rem;
+    }
+
+    #projets p {
+        font-size: 1rem;
+    }
+
+    /* Événements */
+    .evenements-section h2 {
+        font-size: 2rem;
+    }
+
+    .evenement-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .evenement-description {
+        font-size: 0.9rem;
+    }
+
+    /* Footer */
+    .footer-section h3 {
+        font-size: 1.3rem;
+    }
+
+    .footer-section p {
+        font-size: 0.9rem;
+    }
+
+    .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
+    }
+}
+
+/* Support des écrans très larges */
+@media (min-width: 1400px) {
+    .navbar-container {
+        max-width: 1400px;
+    }
+
+    .evenements-section {
+        max-width: 1400px;
+    }
+
+    .footer-content {
+        max-width: 1400px;
+    }
+}
+
+/* Support des écrans en mode paysage sur mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    header {
+        height: auto;
+        min-height: 100vh;
+        padding: 6rem 1rem 3rem;
+    }
+
+    .navbar {
+        padding: 0.5rem 0;
+    }
+
+    .logo img {
+        height: 200%;
+    }
+}
