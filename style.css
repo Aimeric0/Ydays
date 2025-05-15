@@ -49,17 +49,16 @@ body {
     left: 2rem;
 }
 
-.logo img {
-    height: 400%;
+/* Logo sur la page d'accueil */
+body:not(:has(.evenements-section)) .logo img {
+    height: 300%;
     width: auto;
 }
 
-/* Règle spécifique pour la page événements */
+/* Logo sur la page événements */
 body:has(.evenements-section) .logo img {
     height: 150%;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    width: auto;
 }
 
 .navbar ul {
